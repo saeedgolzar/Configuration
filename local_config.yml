@@ -1,0 +1,47 @@
+mixed-port: 7890
+allow-lan: false
+external-controller: 127.0.0.1:57726
+secret: 4db6a95c-42c6-4d1e-80d5-2bde8272a87f
+proxies:
+  - name: "PROXY"
+    type: socks5
+    server: 172.16.16.111
+    port: 7890
+    username: saeed
+    password: saeed1997
+    udp: true
+rule-providers:
+  iran:
+    type: http
+    behavior: classical
+    url: "https://github.com/SamadiPour/iran-hosted-domains/releases/latest/download/clash_rules.yaml"
+    path: ./ruleset/iran.yaml
+    interval: 432000
+
+  google:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    path: ./ruleset/google.yaml
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+    
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+
+rules:
+  - RULE-SET,iran,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,proxy,PROXY
+  - GEOIP,LAN,DIRECT
+  - RULE-SET,telegramcidr,PROXY
