@@ -53,6 +53,7 @@ dns:
   nameserver:
     - https://dns.adguard.com/dns-query
 rules:
+  - RULE-SET,google,PROXY
   - RULE-SET,iran,DIRECT
   - GEOIP,IR,DIRECT
   - RULE-SET,telegramcidr,PROXY
