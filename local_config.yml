@@ -11,6 +11,7 @@ proxies:
     username: saeed
     password: saeed1997
     udp: true
+  - {"type":"vmess","name":"Du-4","server":"94.177.230.50","port":3831,"uuid":"9104fcca-02d2-4478-e078-3408055f3e4b","alterId":32,"cipher":"auto","network":"none","tls":true}
 rule-providers:
   iran:
     type: http
