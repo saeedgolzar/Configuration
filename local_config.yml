@@ -36,12 +36,6 @@ rule-providers:
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
     path: ./ruleset/telegramcidr.yaml
     interval: 86400
-  block:
-    type: http
-    behavior: domain
-    url: https://raw.githubusercontent.com/saeedgolzar/Configuration/main/block.yaml
-    path: ./ruleset/block.yaml
-    interval: 86400
 proxy-groups:
 - name: "Auto"
   type: url-test
@@ -54,5 +48,4 @@ rules:
   - RULE-SET,iran,DIRECT
   - GEOIP,IR,DIRECT
   - RULE-SET,telegramcidr,PROXY
-  - RULE-SET,block,REJECT
   - MATCH,PROXY
