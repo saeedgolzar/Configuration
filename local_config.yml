@@ -37,7 +37,7 @@ rule-providers:
     path: ./ruleset/telegramcidr.yaml
     interval: 86400
   block:
-    type: https
+    type: http
     behavior: domain
     url: https://raw.githubusercontent.com/saeedgolzar/Configuration/main/block.yaml
     path: ./ruleset/block.yaml
