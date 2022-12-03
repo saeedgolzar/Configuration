@@ -39,7 +39,7 @@ rule-providers:
   block:
     type: https
     behavior: domain
-    url: https://raw.githubusercontent.com/alfatihart/clashBlock/main/rule-provider_reject.yaml
+    url: https://raw.githubusercontent.com/saeedgolzar/Configuration/main/block.yaml
     path: ./ruleset/block.yaml
     interval: 86400
 proxy-groups:
