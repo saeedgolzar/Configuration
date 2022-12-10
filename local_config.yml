@@ -5,7 +5,7 @@ secret: 4db6a95c-42c6-4d1e-80d5-2bde8272a87f
 mode: rule
 proxies:
   - name: PROXY
-    type: socks5
+    type: http
     server: 172.16.16.111
     port: 7890
     username: saeed
