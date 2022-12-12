@@ -3,6 +3,15 @@ allow-lan: false
 #external-controller: 127.0.0.1:57726
 secret: 4db6a95c-42c6-4d1e-80d5-2bde8272a87f
 mode: rule
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+    - 1.1.1.1
+    - 1.0.0.1
+  default-nameserver:
+    - 1.1.1.1
+    - 1.0.0.1
 proxies:
   - name: PROXY
     type: http
